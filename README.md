@@ -1,4 +1,4 @@
-# ciuk-challenge3
+# CIUK Challenge 3: amr-coamoxiclav-tree-models
 
 Tree models for predicting E. coli resistance to co-amoxiclav (`coamox`) from patient `age` and deprivation (`imd`), built to answer:
 
