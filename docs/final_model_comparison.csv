@@ -1,0 +1,13 @@
+rank,model_id,model_type,depth,feature_set,cv_accuracy,test_accuracy,cv_recall,test_recall,cv_precision,test_precision,cv_roc_auc,test_roc_auc,test_resistant_flagged,test_resistant_missed,test_false_alarms,test_correctly_cleared,age_importance,imd_importance,top_risk_factor,highest_risk_group
+1,bagging_depth2_balanced_raw_age,bagging,2,raw_age,0.6093,0.652,0.75,0.7541,0.3553,0.3898,0.696,0.7272,46,15,72,117,0.2335,-0.0037,age,"age > 38.5 AND age > 64.5 (39.9% resistant, n=188)"
+2,random_forest_depth2_balanced_raw_age,random_forest,2,raw_age,0.6093,0.66,0.75,0.7869,0.3547,0.4,0.6947,0.726,48,13,72,117,0.2316,-0.0003,age,"imd > 3.5 AND imd <= 4.5 (29.1% resistant, n=148)"
+3,voting_top3_balanced_raw_age,voting,2/2/1,raw_age,0.6067,0.656,0.7444,0.7541,0.352,0.3932,0.6931,0.7282,46,15,71,118,0.232,-0.0005,age,
+4,voting_top3_balanced_binned_age,voting,2/2/2,binned_age,0.6133,0.656,0.7444,0.8033,0.3557,0.3984,0.684,0.7312,49,12,74,115,0.2404,0.0074,age,
+5,random_forest_depth2_balanced_binned_age,random_forest,2,binned_age,0.6133,0.656,0.7444,0.8033,0.3557,0.3984,0.6836,0.7337,49,12,74,115,0.2416,0.0045,age,"imd > 3.5 AND imd <= 4.5 (29.1% resistant, n=148)"
+6,bagging_depth2_balanced_binned_age,bagging,2,binned_age,0.6133,0.656,0.7444,0.8033,0.3557,0.3984,0.6829,0.7256,49,12,74,115,0.2389,-0.0058,age,"age_band > 35.0 AND imd > 3.5 (35.7% resistant, n=213)"
+7,gradient_boosting_depth2_balanced_binned_age,gradient_boosting,2,binned_age,0.612,0.656,0.6833,0.7213,0.3476,0.3894,0.6821,0.7338,44,17,69,120,0.2429,0.0137,age,"age_band > 45.0 AND imd > 3.5 (41.0% resistant, n=166)"
+8,gradient_boosting_depth1_balanced_raw_age,gradient_boosting,1,raw_age,0.6053,0.664,0.7389,0.7377,0.3504,0.3982,0.6815,0.7286,45,16,68,121,0.2307,0.0019,age,"age > 50.5 (36.0% resistant, n=372)"
+9,adaboost_depth1_balanced_raw_age,adaboost,1,raw_age,0.604,0.656,0.7444,0.7541,0.351,0.3932,0.6791,0.7192,46,15,71,118,0.2207,-0.001,age,"age > 50.5 (36.0% resistant, n=372)"
+10,adaboost_depth1_balanced_binned_age,adaboost,1,binned_age,0.6173,0.656,0.6944,0.8033,0.352,0.3984,0.6781,0.7312,49,12,74,115,0.2341,0.0029,age,"age_band > 45.0 (35.4% resistant, n=378)"
+11,decision_tree_depth2_balanced_binned_age,decision_tree,2,binned_age,0.6133,0.656,0.7444,0.8033,0.3557,0.3984,0.6738,0.7198,49,12,74,115,0.2277,0.0054,age,"age_band > 45.0 AND imd > 3.5 (41.0% resistant, n=166)"
+12,decision_tree_depth2_balanced_raw_age,decision_tree,2,raw_age,0.6067,0.656,0.7389,0.7541,0.3522,0.3932,0.6719,0.7021,46,15,71,118,0.2084,0.0028,age,"age > 50.5 AND imd > 3.5 (41.7% resistant, n=163)"
