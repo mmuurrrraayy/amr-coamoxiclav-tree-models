@@ -1,4 +1,4 @@
-# ciuk-challenge3
+# amr-coamoxiclav-tree-models
 
 Tree models for predicting E. coli resistance to co-amoxiclav (`coamox`) from patient `age` and deprivation (`imd`), built to answer:
 
@@ -80,8 +80,8 @@ ssh <username>@<vm-address>
 Then clone the project and move into it:
 
 ```bash
-git clone https://github.com/mmuurrrraayy/ciuk-challenge3.git
-cd ciuk-challenge3
+git clone https://github.com/mmuurrrraayy/amr-coamoxiclav-tree-models.git
+cd amr-coamoxiclav-tree-models
 ```
 
 ## 2. Creating the environment
@@ -203,11 +203,3 @@ Everything is saved under `Outputs/`, in one folder per step. File names describ
 - For gradient boosting, node values are log-odds corrections, not probabilities.
 - Models are trained with balanced weights, so node `value`s are weighted. The leaf table in each `_rules.txt` gives the real % resistant in each leaf.
 
-## Optional: installing the micro text editor
-
-The VM only has vim. To install micro into the current folder without root:
-
-```bash
-curl https://getmic.ro | bash
-./micro README.md
-```
